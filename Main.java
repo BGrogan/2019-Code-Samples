@@ -1,15 +1,32 @@
-public class Main {
-// TODO: Expand project structure
+import groups.colors;
+import groups.police.RainbowPoliceDepartment;
+import java.util.Iterator;
+import java.util.List;
 
+class Main {
 	private static String jSdkVer = "";
-
 
 	public static void main(String[] args) {
 
-
+		List<List<Integer>> optimalRoute = null;
+		//optimalRoute = [[2,1]];
 		setJSdkVer();
 
-		System.out.println(getHelloWorldMessage(getJSdk()));
+		//System.out.println(getHelloWorldMessage(getJSdk()));
+
+		String[] aryColors = new String[]{"red", "blue", "green"};
+		String colors = "";
+
+		for (int i=0; i < aryColors.length; i++) {
+			colors += (groups.colors.delimitedColors(aryColors[i]));
+		}
+
+		//System.out.println("Do you like colors? These are some of the greatest:");
+
+		groups.police.RainbowPoliceDepartment.detain(colors);
+
+		//System.out.println("(The original colors were: " + colors + ").");
+
 	}
 
 
@@ -35,5 +52,6 @@ public class Main {
 
 		return jSdkVer;
 	}
+
 
 }
